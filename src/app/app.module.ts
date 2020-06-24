@@ -8,7 +8,7 @@ import { TeamsViewerComponent } from './teams-viewer/teams-viewer.component';
 import { MatTableModule } from '@angular/material/table';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
-import { teamReducer } from './actions/team.reducer';
+import { reducers } from './store/reducers';
 @NgModule({
   declarations: [AppComponent, TeamsViewerComponent],
   imports: [
@@ -17,7 +17,7 @@ import { teamReducer } from './actions/team.reducer';
     BrowserAnimationsModule,
     MatTableModule,
     RouterModule,
-    StoreModule.forRoot({ teams: teamReducer })
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent],
