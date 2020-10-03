@@ -1,3 +1,16 @@
 <div id="header">
-   <div id="logo">FM</div> 
+  <div class="left-section">
+    <mat-icon
+      aria-hidden="false"
+      aria-label="Open menu"
+      *ngIf="layoutService.isLeftSidenavCollapsed$ | async"
+      (click)="layoutService.toggleLeftSidenav()"
+      >menu</mat-icon
+    >
+  </div>
+  <div class="logo">
+    <div class="logo-left">F</div>
+    <div class="logo-right">M</div>
+  </div>
+  <div class="right-section"></div>
 </div>
