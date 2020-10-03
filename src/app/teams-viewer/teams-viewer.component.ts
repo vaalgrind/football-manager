@@ -10,7 +10,7 @@ import { TeamsService } from '../store/teams/teams.service';
 })
 export class TeamsViewerComponent implements OnInit {
   public teams$: Observable<Team[]>;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = ['position', 'name',  'user'];
   constructor(private teamsService: TeamsService) {}
 
   ngOnInit(): void {
