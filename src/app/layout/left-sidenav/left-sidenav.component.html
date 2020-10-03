@@ -1,1 +1,14 @@
-<div id="left-sidenav"></div>
+<div
+  class="left-sidenav"
+  [@slideInOut]="(layoutService.isLeftSidenavCollapsed$ | async) ? 'out' : 'in'"
+>
+  <div class="left-sidenav-header">
+    <mat-icon
+      *ngIf="!(layoutService.isLeftSidenavCollapsed$ | async)"
+      aria-hidden="false"
+      aria-label="Close menu"
+      (click)="layoutService.toggleLeftSidenav()"
+      >menu_open</mat-icon
+    >
+  </div>
+</div>

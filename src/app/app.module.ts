@@ -14,8 +14,14 @@ import { effects } from './store/effects';
 import { services } from './store/services';
 import { HeaderComponent } from './layout/header/header.component';
 import { LeftSidenavComponent } from './layout/left-sidenav/left-sidenav.component';
+import { SharedModule } from './modules/shared/shared.module';
 @NgModule({
-  declarations: [AppComponent, TeamsViewerComponent, HeaderComponent, LeftSidenavComponent],
+  declarations: [
+    AppComponent,
+    TeamsViewerComponent,
+    HeaderComponent,
+    LeftSidenavComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -23,6 +29,7 @@ import { LeftSidenavComponent } from './layout/left-sidenav/left-sidenav.compone
     BrowserAnimationsModule,
     MatTableModule,
     RouterModule,
+    SharedModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot(effects),
   ],
