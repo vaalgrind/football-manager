@@ -1,7 +1,9 @@
 <div class="main-container">
-  <app-header></app-header>
+  <app-left-sidenav></app-left-sidenav>
   <div class="content-container">
-    <app-left-sidenav></app-left-sidenav>
-    <router-outlet></router-outlet>
+    <app-header></app-header>
+    <perfect-scrollbar>
+      <router-outlet></router-outlet>
+    </perfect-scrollbar>
   </div>
 </div>
