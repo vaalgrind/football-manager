@@ -1,3 +1,5 @@
-import { TeamReducer } from './team/team.reducer';
+import { TeamsReducer } from './teams/teams.reducer';
 
-export const reducers = { teams: TeamReducer };
+export const reducers = {
+  teams: TeamsReducer,
+};
