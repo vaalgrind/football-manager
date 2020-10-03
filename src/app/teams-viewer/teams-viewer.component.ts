@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { add } from '../actions/team.actions';
+import { Observable } from 'rxjs';
+import { Team } from '../store/team/team.model';
+import { TeamsService } from '../store/teams/teams.service';
 
 @Component({
   selector: 'app-teams-viewer',
@@ -8,23 +9,12 @@ import { add } from '../actions/team.actions';
   styleUrls: ['./teams-viewer.component.scss'],
 })
 export class TeamsViewerComponent implements OnInit {
-  public dataSource: Team[] = [,];
-  dataSource$;
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  constructor(private store: Store<{ teams: Team[] }>) {
-    this.dataSource$ = store.pipe(select('teams'));
-  }
+  public teams$: Observable<Team[]>;
+  displayedColumns: string[] = ['position', 'name',  'user'];
+  constructor(private teamsService: TeamsService) {}
 
   ngOnInit(): void {
-    this.store.dispatch(
-      add({ id: '1', name: 'Barca', shorcut: 'FCB', owner: 'Pablo' })
-    );
+    this.teams$ = this.teamsService.getTeams();
+    this.teamsService.addTeam({ id: '2', name: 'test', userId: '1' });
   }
-}
-
-export interface Team {
-  id: string;
-  name: string;
-  shorcut: string;
-  owner: string;
 }
