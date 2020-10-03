@@ -1,0 +1,11 @@
+@import "../../theme.scss";
+#left-sidenav {
+  background-color: $primary-bg-dark;
+  box-shadow: 2px 0px 5px 0px $primary-bg-dark;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  bottom: 0;
+  width: 200px;
+  height: 100%;
+}

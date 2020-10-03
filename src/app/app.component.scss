@@ -1,0 +1,15 @@
+@import "./theme.scss";
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: $primary-bg;
+  color: $primary-text-color;
+  .content-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+}
