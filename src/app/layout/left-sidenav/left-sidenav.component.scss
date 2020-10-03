@@ -1,11 +1,20 @@
+:host {
+  height: 100%;
+  display: block;
+}
 @import "../../theme.scss";
-#left-sidenav {
+.left-sidenav {
   background-color: $primary-bg-dark;
   box-shadow: 2px 0px 5px 0px $primary-bg-dark;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  bottom: 0;
   width: 200px;
   height: 100%;
+
+  &-header {
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
 }
