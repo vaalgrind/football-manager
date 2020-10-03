@@ -12,8 +12,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { reducers } from './store/reducers';
 import { effects } from './store/effects';
 import { services } from './store/services';
+import { HeaderComponent } from './layout/header/header.component';
+import { LeftSidenavComponent } from './layout/left-sidenav/left-sidenav.component';
 @NgModule({
-  declarations: [AppComponent, TeamsViewerComponent],
+  declarations: [AppComponent, TeamsViewerComponent, HeaderComponent, LeftSidenavComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
