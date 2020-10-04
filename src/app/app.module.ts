@@ -15,16 +15,20 @@ import { services } from './store/services';
 import { HeaderComponent } from './layout/header/header.component';
 import { LeftSidenavComponent } from './layout/left-sidenav/left-sidenav.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { LeagueViewerComponent } from './league-viewer/league-viewer.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
     TeamsViewerComponent,
     HeaderComponent,
     LeftSidenavComponent,
+    LeagueViewerComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
