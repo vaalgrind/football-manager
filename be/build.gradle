@@ -30,6 +30,7 @@ dependencies {
   implementation "io.springfox:springfox-swagger-ui:${springFoxVersion}"
   annotationProcessor "org.projectlombok:lombok"
 
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.3.4.RELEASE'
 }
 
 test {
